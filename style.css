@@ -145,6 +145,7 @@ header {
 /* ----------------- About -------------------- */
 
 #about {
+    width: 100%;
     padding: 100px;
     
     .row {
@@ -585,6 +586,7 @@ header {
 /* ----------------- contact -------------------- */
 
 #contact {
+    width: 100%;
     padding: 100px 120px;
     
     .row {
@@ -717,6 +719,7 @@ header {
 /* ----------------- footer -------------------- */
 
 footer {
+    width: 100%;
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
