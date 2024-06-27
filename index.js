@@ -49,3 +49,16 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     })
     .catch(error => console.error('Error!', error.message))
 })
+
+
+/* ----------------- responsive -------------------- */
+
+function openMenu() {
+    document.getElementById('side-menu').style.right = "0";
+    document.getElementById('open-menu-button').style.display = 'none';
+}
+
+function closeMenu() {
+    document.getElementById('side-menu').style.right = "-200px";
+    document.getElementById('open-menu-button').style.display = 'block';
+}
