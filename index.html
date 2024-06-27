@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -27,15 +27,17 @@
             <div class="container">
                 <nav class="section" id="nav">
                     <div class="logo"><a href="#header"><img src="images/logo.png" alt="Logo of ASDTiwari"></a></div>
-                    <ul class="side-menu">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#testemonial">Testemonials</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                    <ul class="side-menu" id="side-menu">
+                        <i class="menu-button fa-solid fa-xmark" onclick="closeMenu()"></i>
+                        <li><a href="#header" onclick="closeMenu()">Home</a></li>
+                        <li><a href="#about" onclick="closeMenu()">About</a></li>
+                        <!-- <li><a href="#skills">Skills</a></li> -->
+                        <!-- <li><a href="#services">Services</a></li> -->
+                        <!-- <li><a href="#projects">Projects</a></li> -->
+                        <!-- <li><a href="#testemonial">Testemonials</a></li> -->
+                        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
                     </ul>
+                    <i id="open-menu-button" class="menu-button fa-solid fa-bars" onclick="openMenu()"></i>
                 </nav>
                 <div class="header-text">
                     <div class="quote"><p>"While I may not be your first choice, I am dedicated to providing unparalleled value."</p></div>
@@ -110,8 +112,7 @@
                                 <h3>9.14 CGPA</h3>
                                 <h4>Batch 2022-26</h4>
                                 <h4>Computer Science and Engineering</h4>
-                                <h2>BTech</h2>
-                                
+                                <h2>BTech</h2>    
                             </div>
                             <div class="items">
                                 <div class="icon">
@@ -121,7 +122,6 @@
                                 <h4>2022</h4>
                                 <h4>MPBSE</h4>
                                 <h2>12<sup>TH</sup> Class</h2>
-                                
                             </div>
                             <div class="items">
                                 <div class="icon">
@@ -131,7 +131,6 @@
                                 <h4>2020</h4>
                                 <h4>MPBSE</h4>
                                 <h2>10<sup>TH</sup> Class</h2>
-                                
                             </div>
                         </div>
                     </div>
@@ -140,7 +139,7 @@
         </section>
 
         <!-- ---------------- skills ------------------- -->
-
+<!-- 
         <section id="skills" class="scroll">
             <div class="subtitle">
                 <h1>Skills</h1>
@@ -149,14 +148,14 @@
             <div class="container">
                 
             </div>
-        </section>
+        </section> -->
 
         <!-- ---------------- services ------------------- -->
 
-<!--        <section id="services"></section>-->
+        <!-- <section id="services"></section> -->
         
         <!-- ---------------- projects ------------------- -->
-
+<!-- 
         <section id="projects" class="scroll">
             <h1>Projects</h1>
             <div class="row">
@@ -211,10 +210,10 @@
                 </div>
             </div>
         </section>
-        
+-->        
         <!-- -------------- testemonials ----------------- -->
 
-<!--        <section id="testemonials"></section>--> 
+       <!-- <section id="testemonials"></section>  -->
 
         <!-- ---------------- contact ------------------- -->
 
