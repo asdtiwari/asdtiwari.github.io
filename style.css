@@ -56,6 +56,10 @@ header {
             flex-wrap: wrap;
             z-index: 100;
 
+            .menu-button {
+                display: none;
+            }
+
             .logo {
 
                 img {
@@ -123,7 +127,7 @@ header {
                     line-height: normal;
                     color: #ababab;
                     text-align: justify;
-                    font-family: crusive;
+                    font-family: cursive;
                     font-size: 20px;
                     font-weight: 500;
                     font-style: italic;
@@ -293,6 +297,7 @@ header {
 
                 .container::-webkit-scrollbar {
                     height: 3px;
+                    width: 3px;
                 }
 
                 .container::-webkit-scrollbar-track {
@@ -339,6 +344,7 @@ header {
                     }
     
                     &::-webkit-scrollbar {
+                        height: 3px;
                         width: 3px;
                     }
     
@@ -408,6 +414,7 @@ header {
     
                     &::-webkit-scrollbar {
                         height: 3px;
+                        width: 3px;
                     }
     
                     &::-webkit-scrollbar-track {
@@ -431,7 +438,7 @@ header {
 }
 
 /* ----------------- skills -------------------- */
-
+/* 
 #skills {
     padding: 100px;
 
@@ -450,10 +457,10 @@ header {
             text-align: justify;
         }
     }
-}
+} */
 
 /* ----------------- projects -------------------- */
-
+/* 
 #projects {
     padding: 100px;
 
@@ -573,7 +580,7 @@ header {
             }
         }
     }
-}
+} */
 
 /* ----------------- contact -------------------- */
 
@@ -649,6 +656,8 @@ header {
                     transition: transform 0.5s;
                     font-weight: 400;
                     font-family: cursive;
+                    pointer-events: none;
+                    /* enable when the cv will uploaded */
                 }
 
                 a:hover {
@@ -729,7 +738,6 @@ footer {
 
 /* ----------------- animation -------------------- */
 
-
 @keyframes rightLeft {
     0% {
         transform: translateX(50px);
@@ -738,7 +746,6 @@ footer {
         transform: translateX(0);
     }
 }
-
 
 .scroll {
     animation: fadeIn 0.5s forwards;
@@ -770,3 +777,149 @@ footer {
     }
 }
 
+/* ----------------- responsive -------------------- */
+
+/* Small devices (phones, 600px and below) */
+@media only screen and (max-width: 768px) {
+    header {
+        .container {
+            padding: 10px;
+            background-image: url(images/mobile-background.jpg);
+            
+            nav {
+                top: 15px;
+                .menu-button {
+                    display: block;
+                    font-size: 25px;
+                    transition: display 0.5s;
+                }
+
+                ul {
+                    position: fixed;
+                    background-color: rgba(255, 68, 0, 0.685);
+                    width: 200px;
+                    height: 100vh;
+                    top: 0;
+                    right: -200px;
+                    padding: 20px;
+                    padding-top: 75px;
+                    transition: right 0.5s;
+
+                    li {
+                        display: block;
+                        margin: 20px;
+
+                        a {
+                            font-size: 20px;
+                        }
+                    }
+
+                    .menu-button {
+                        position: absolute;
+                        right: 35px;
+                        top: 30px;
+                    }
+                }
+            }
+
+            .header-text {
+                position: absolute;
+                top: 50vh;
+                line-height: normal;
+
+                .quote {
+                    p {
+                        font-size: 15px;
+                        text-align: left;
+                        margin-bottom: 35px;
+                    }
+                }
+
+                h3 {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                }
+
+                h1 {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    
+    #about {
+        padding: 60px 20px;
+
+        .row {
+            flex-direction: column;
+
+            .col-1 {
+                flex-basis: auto;
+
+                img {
+                    width: 50vh;
+                }
+            }
+        
+            .col-2 {
+                flex-basis: auto;
+
+                h1 {
+                    text-align: center;
+                }
+                #codespace {
+                    .container {
+                        scrollbar-width: auto;
+                        height: 275px;
+                    }
+                }
+
+                #leads {
+                    .container {
+                        scrollbar-width: auto;
+                        height: 275px;
+                    }
+                }
+
+                #education {
+                    .container {
+                        scrollbar-width: auto;
+                        height: 275px;
+                    }
+                }
+            }
+        }
+    }
+
+    #contact {
+        padding: 60px 10px;
+
+        .row {
+            flex-direction: column;
+
+            .col-1 {
+                .section-1 {
+                    .item {
+                        text-align: center;
+                    }
+                }
+
+                .section-2 {
+                    text-align: center;
+                }
+
+                .section-3 {
+                    text-align: center;
+                }
+            }
+
+            .col-2 {
+                form {
+                    input, textarea {
+                        margin: 20px 0;
+                    }
+                }
+            }
+        }
+    }
+}
