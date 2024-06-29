@@ -1,64 +1,29 @@
-// Switching content of about section and skills section
-function openTab(tabname) {
-    
-    var tablinks = document.getElementsByClassName("tab-link");
-    var tabcontents = document.getElementsByClassName("tab-content");
+/* ----------------- Background -------------------- */
+/* To set the background in header section which is responsive and will change automatically as per the size of screen */
+function setBackgroundImage() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
 
-    for(var i = 0; i < tabcontents.length; i++) {
-        tabcontents[i].classList.remove("active-tab");
-    }
-
-    for(var i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active-link");
-    }
-
-    document.getElementById(tabname).classList.add("active-tab");
-    event.currentTarget.classList.add("active-link");
-}
-
-// User only able to click submit only once for one message when the form will reset user can again submit
-var allowSubmit = true;
-var element = null;
-function disableForUser(){
-    element = document.getElementById("submit-query");
-    if(allowSubmit) {
-        allowSubmit = false;
+    if(height > width * 1.1) {
+        document.getElementById('header-container').style.backgroundImage = "url(images/mobile-background.jpg)";
     }
     else {
-        element.setAttribute("disabled", "disabled");
+        document.getElementById('header-container').style.backgroundImage = "url(images/background.jpg)";
     }
 }
-function enableForUser() {
-    allowSubmit = true;
-    element = document.getElementById("submit-query");
-    element.removeAttribute("disabled");
-}
+// Correctly assign the event handlers
+window.onresize = setBackgroundImage;
+window.onload = setBackgroundImage;
+// Initial call to set the background image on page load
+setBackgroundImage();
 
-// Sending form data to google sheet
-const scriptURL = 'https://script.google.com/macros/s/AKfycbw7WUGloiVd5x2eraLH4Qh0ZGhHK6mLfn9RlNmcnzUbMhGRn5F4FJ3XP-QntjAi70elmg/exec'
-const form = document.forms['submit-to-google-sheet']
-var msg = document.getElementById("submitted-msg");
-form.addEventListener('submit', e => {
-e.preventDefault()
-fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response =>  {
-        msg.innerHTML = "Message sent successfully!";
-        setTimeout(() => { msg.innerHTML = ""; }, 5000);
-        form.reset();
-        enableForUser();
-    })
-    .catch(error => console.error('Error!', error.message))
-})
-
-
-/* ----------------- responsive -------------------- */
-
-function openMenu() {
-    document.getElementById('side-menu').style.right = "0";
+/* ----------------- SideMenu -------------------- */
+function openSideMenu() {
+    document.getElementById('side-menu').style.top = '0';
     document.getElementById('open-menu-button').style.display = 'none';
 }
 
-function closeMenu() {
-    document.getElementById('side-menu').style.right = "-200px";
+function closeSideMenu() {
+    document.getElementById('side-menu').style.top = '-100%';
     document.getElementById('open-menu-button').style.display = 'block';
 }
