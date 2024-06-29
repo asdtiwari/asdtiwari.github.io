@@ -56,8 +56,8 @@ header {
             .logo {
                 a {
                     img {
-                        width: 100px;
-                        height: 25px;
+                        width: 150px;
+                        height: 35px;
                         border-radius: 10px;
                         border-bottom: 2px solid orangered;
                         border-right: 2px solid orangered;
@@ -168,20 +168,10 @@ header {
     header {
         .container {
             nav {
-                .logo {
-                    a {
-                        img {
-                            width: 200px;
-                            height: 40px;
-                            border-width: 5px;
-                        }
-                    }
-                }
-
                 .side-menu {
                     li {
                         a {
-                            font-size: 25px;
+                            font-size: 20px;
                             margin: 0 15px;;
                         }
                     }
@@ -191,7 +181,7 @@ header {
             .header-text {
                 .quote {
                     p {
-                        font-size: 25px;
+                        font-size: 20px;
                     }
                 }
 
@@ -200,7 +190,7 @@ header {
                 }
 
                 h1 {
-                    font-size: 45px;
+                    font-size: 40px;
                 }
             }
         }
@@ -215,20 +205,10 @@ header {
     header {
         .container {
             nav {
-                .logo {
-                    a {
-                        img {
-                            width: 185px;
-                            height: 45px;
-                            border-width: 5px;
-                        }
-                    }
-                }
-
                 .side-menu {
                     li {
                         a {
-                            font-size: 30px;
+                            font-size: 20px;
                         }
                     }
                 }
@@ -237,7 +217,7 @@ header {
             .header-text {
                 .quote {
                     p {
-                        font-size: 25px;
+                        font-size: 20px;
                     }
                 }
 
@@ -261,16 +241,6 @@ header {
     header {
         .container {
             nav {
-                .logo {
-                    a {
-                        img {
-                            width: 150px;
-                            height: 35px;
-                            border-width: 3px;
-                        }
-                    }
-                }
-
                 .side-menu {
                     li {
                         a {
@@ -338,16 +308,6 @@ header {
     header {
         .container {
             nav {
-                .logo {
-                    a {
-                        img {
-                            width: 175px;
-                            height: 40px;
-                            border-width: 5px;
-                        }
-                    }
-                }
-
                 .side-menu {
                     li {
                         a {
@@ -384,14 +344,6 @@ header {
     header {
         .container {
             nav {
-                .logo {
-                    a {
-                        img {
-                            width: 125px;
-                            height: 25px;
-                        }
-                    }
-                }
 
                 .side-menu {
                     li {
@@ -500,16 +452,6 @@ header {
     header {
         .container {
             nav {
-                .logo {
-                    a {
-                        img {
-                            width: 175px;
-                            height: 40px;
-                            border-width: 5px;
-                        }
-                    }
-                }
-
                 .side-menu {
                     li {
                         a {
@@ -545,17 +487,6 @@ header {
     header {
         .container {
             nav {
-
-                .logo {
-                    a {
-                        img {
-                            width: 150px;
-                            height: 35px;
-                            border-width: 5px;
-                        }
-                    }
-                }
-
                 .side-menu {
                     li {
                         a {
@@ -591,16 +522,6 @@ header {
     header {
         .container {
             nav {
-                .logo {
-                    a {
-                        img {
-                            width: 100px;
-                            height: 30px;
-                            border-width: 2px;
-                        }
-                    }
-                }
-
                 .side-menu {
                     li {
                         a {
@@ -647,13 +568,6 @@ header {
                 width: 85%;
                 margin: 0 10% 0 5%;
 
-                .logo {
-                    a {
-                        img {
-                            border-width: 3px;
-                        }
-                    }
-                }
                 #open-menu-button {
                     display: block;
                     width: 30px;
