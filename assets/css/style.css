@@ -68,6 +68,10 @@ img {
     }
 }
 
+#content-wrapper {
+    padding-top: 60px;
+}
+
 /* helper class for height of content*/
 .full-height {
     min-height: 100vh;
@@ -99,6 +103,7 @@ img {
 
     /* content wrapper */
     #content-wrapper {
+        padding: 0;
         padding-left: var(--sidebar-width);
     }
 }
@@ -140,4 +145,3 @@ img {
         width: 100%;
     }
 }
- 
