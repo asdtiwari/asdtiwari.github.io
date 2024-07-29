@@ -86,6 +86,10 @@ img {
 }
 
 /* body */
+#content-wrapper {
+    padding-top: 59px;
+}
+
 .home {
     padding-top: 60px;
 }
