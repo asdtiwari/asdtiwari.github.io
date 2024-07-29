@@ -257,13 +257,20 @@ img {
 
 @media (max-width: 575px) {
     #home {
-        margin-top: 20px;
+        padding-top: 0 !important;
         
         .container .row {
             text-align: center !important;
 
             .my-quote br {
                 display: none;
+            }
+
+            .user-image {
+                width: 60%;
+                height: 75%;
+                padding: 0;
+                margin: 0;
             }
         }
     }
