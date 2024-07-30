@@ -3,28 +3,45 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
 <html>
+
   <head>
+
     <meta charset="utf-8" />
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
     <title>ASD Tiwari - Portfolio</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon-asdt.ico">
+    
     <meta
       name="description"
       content="Explore ASD Tiwari's professional portfolio, showcasing skills, experience, and achievements in various fields."
     />
+    
     <meta
       name="keywords"
       content="ASD Tiwari, ASDTiwari, Akhilesh Tiwari, Akhilesh SD Tiwari, portfolio, professional skills, experience, achievements, techie"
     />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Style Sheets -->
+    <!-- Start of External Style Sheets Inclusion -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
     <link rel="stylesheet" href="./assets/css/aos.css" />
+
     <link rel="stylesheet" href="./assets/css/line-awesome.min.css" />
+    
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- End of External Style Sheets Inclusion -->
+
   </head>
+
   <body data-bs-spy="scroll" data-bs-target=".navbar">
+    
     <!--[if lt IE 7]>
       <p class="browsehappy">
         You are using an <strong>outdated</strong> browser. Please
@@ -35,445 +52,526 @@
     <!-- Start of Body Section -->
 
     <!-- Start of NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <!-- Removed the navbar-light and bg-light from the navbar class and provided navbar-dark class -->
-      <!-- fixed-top class is used to fixed the navbar -->
-      <div class="container flex-lg-column">
-        <!-- By removing the fluid from the container-fluid, provides padding from left and right -->
-        <!-- flex-lg-column refers to flex large screen and flex-direction is column for the navigation bar -->
-        <a class="navbar-brand mb-lg-4 mx-lg-auto" href="#home">
-          <!-- mx refers to margin left and right -->
-          <img
-            class="logo d-block d-lg-none"
-            src="./assets/images/logo.png"
-            alt="logo"
-          />
-          <!-- d-block means display block normally but d-lg-none refers to display none on large screen -->
-          <img
-            src="./assets/images/navbar-image.png"
-            alt="picture of asdtiwari"
-            class="d-none d-lg-block rounded-circle"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto flex-lg-column">
-            <!-- To make the navbar margin to left we have set the class ms-auto which means margin to start(left) auto, by default it was me-auto -->
-            <li class="nav-item text-center">
-              <a class="nav-link active" aria-current="page" href="#home"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item text-center">
-              <a class="nav-link" href="#services">Services</a>
-            </li>
-            <li class="nav-item text-center">
-              <a class="nav-link" href="#work">Work</a>
-            </li>
-            <li class="nav-item text-center">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item text-center">
-              <a class="nav-link" href="#reviews">Reviews</a>
-            </li>
-            <li class="nav-item text-center">
-              <a class="nav-link" href="#blog">Blog</a>
-            </li>
-            <li class="nav-item text-center">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
+     <nav class="navbar navbar-dark fixed-top" id="navbar">
+        
+        <div class="container d-none d-lg-flex flex-lg-column">
+            
+            <a href="#home" class="navbar-brand mb-lg-4 mx-lg-auto">
+
+                <img src="assets/images/navbar-image.png" alt="picture of asdtiwari" class="logo d-none d-lg-block rounded-circle">
+
+            </a>
+
+            <div id="navbarSupportedContent">
+                
+                <ul class="navbar-nav ms-auto flex-lg-column">
+
+                    <li class="nav-itme d-flex justify-content-center">
+
+                        <a href="#home" aria-current="page" class="nav-link active">Home</a>
+
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#services" class="nav-link">Services</a>
+
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#work" class="nav-link">Work</a>
+                        
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#about" class="nav-link">About</a>
+                        
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#reviews" class="nav-link">Reviews</a>
+                        
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#blog" class="nav-link">Blog</a>
+                        
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#contact" class="nav-link">Contact</a>
+                        
+                    </li>
+
+                </ul>
+
+            </div>
+
         </div>
-      </div>
-    </nav>
+
+        <div class="container-fluid d-lg-none">
+            
+            <a class="navbar-brand" href="#home">
+
+                <img src="assets/images/logo.png" alt="logo" class="logo d-block d-lg-none">
+
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasNavbar" data-bs-scroll="true" data-bs-backdrop="true" aria-labelledby="offcanvasNavbarLabel">
+              
+              <div class="offcanvas-header">
+                
+                <a class="navbar-brand" href="#home"  data-bs-dismiss="offcanvas" aria-label="Close">
+
+                    <img src="assets/images/logo.png" alt="logo" class="logo d-block d-lg-none">
+    
+                </a>
+                
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+              </div>
+
+              <div class="offcanvas-body">
+                <ul class="navbar-nav ms-auto flex-lg-column">
+
+                    <li class="nav-itme d-flex justify-content-center">
+
+                        <a href="#home" aria-current="page" class="nav-link active" data-bs-dismiss="offcanvas" aria-label="Close">Home</a>
+
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#services" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close">Services</a>
+
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#work" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close">Work</a>
+                        
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#about" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close">About</a>
+                        
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#reviews" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close">Reviews</a>
+                        
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#blog" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close">Blog</a>
+                        
+                    </li>
+
+                    <li class="nav-item d-flex justify-content-center">
+
+                        <a href="#contact" class="nav-link" data-bs-dismiss="offcanvas" aria-label="Close">Contact</a>
+                        
+                    </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+     </nav>
     <!-- End of NavBar -->
 
     <!-- Start of content wrapper -->
     <div id="content-wrapper">
-      <!-- Start of Home -->
-      <section class="home full-height px-lg-5 py-5" id="home">
-        <div class="container">
-          <div class="row justify-content-md-center g-0">
-            <div class="d-lg-none col-md-3 order-md-1 d-flex flex-row align-items-center justify-content-center">
-              <img src="assets/images/user.png" alt="Image of Akhilesh Tiwari" class="user-image rounded-circle">
-            </div> 
-            <div class="col-lg-9 col-md-9">
-              <!-- col-lg-8 means this div will cover 8 column space on large and above large device and normally it'll cover 12 column space -->
-              <p class="lead my-quote">
-                &OpenCurlyDoubleQuote;While I may not be your first choice, <br />I am dedicated to providing unparalleled
-                value.&CloseCurlyDoubleQuote;
-              </p>
-              <h3>Tech Enthusiast | Student</h3>
-              <h1 class="display-4 fw-bold my-4">
-                Hi, I'm <span class="text-brand">Akhilesh</span><br />Tiwari from Bharat
-              </h1>
-              <div class="row justify-content-md-start align-items-baseline gy-3">
-                <div class="col-md-5 col-lg-6 col-xl-4">
-                  <a href="#work" class="btn btn-brand me-3 fw-semibold">Explore My Work</a>
-                </div>
-                <div class="col-md-5 col-lg-6 col-xl-4">
-                  <a href="tel:+917000454120" class="link-custom">Call: &lpar;+91&rpar; 7000454120</a>
+
+        <!-- Start of Home -->
+        <section class="home full-height px-lg-5 py-5" id="home">
+          <div class="container">
+            <div class="row justify-content-md-center g-0">
+              <div class="d-lg-none col-sm-3 order-sm-1 d-flex flex-row align-items-center justify-content-center">
+                <img src="assets/images/user.png" alt="Image of Akhilesh Tiwari" class="user-image rounded-circle">
+              </div> 
+              <div class="col-lg-9 col-sm-9">
+                <p class="lead my-quote">
+                  &OpenCurlyDoubleQuote;While I may not be your first choice, <br />I am dedicated to providing unparalleled
+                  value.&CloseCurlyDoubleQuote;
+                </p>
+                <h3>Tech Enthusiast | Student</h3>
+                <h1 class="display-4 fw-bold my-4">
+                  Hi, I'm <span class="text-brand">Akhilesh</span><br />Tiwari from Bharat
+                </h1>
+                <div class="row justify-content-md-start align-items-baseline gy-3">
+                  <div class="col-md-5 col-lg-6 col-xl-4">
+                    <a href="#work" class="btn btn-brand me-3 fw-semibold">Explore My Work</a>
+                  </div>
+                  <div class="col-md-5 col-lg-6 col-xl-4">
+                    <a href="tel:+917000454120" class="link-custom">Call: &lpar;+91&rpar; 7000454120</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- End of Home -->
-
-      <!-- Start of Service Section -->
-      <section id="services" class="full-height px-lg-5 py-5">
-        <div class="container">
-          <div class="row pb-4">
-            <div class="col-lg-8">
-              <h6 class="text-brand">SERVICES</h6>
-              <h1>Services That I Provide</h1>
+        </section>
+        <!-- End of Home -->
+  
+        <!-- Start of Service Section -->
+        <section id="services" class="full-height px-lg-5 py-5">
+          <div class="container">
+            <div class="row pb-4">
+              <div class="col-lg-8">
+                <h6 class="text-brand">SERVICES</h6>
+                <h1>Services That I Provide</h1>
+              </div>
+              <div class="row gy-4 mx-auto">
+                <div class="col-md-4">
+                  <div class="service p-4 bg-base rounded-5 shadow-effect">
+                    <div class="iconbox rounded-5">
+                      <i class="las la-feather"></i>
+                    </div>
+                    <h4 class="my-2">UX Design</h4>
+                    <p>I craft high-performing and delighful experiences tailored and conversion-focused</p>
+                    <a href="#" class="link-custom">Read More</a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service p-4 bg-base rounded-5 shadow-effect">
+                    <div class="iconbox rounded-5">
+                      <i class="las la-pencil-ruler"></i>
+                    </div>
+                    <h4 class="my-2">Branding</h4>
+                    <p>I craft high-performing and delighful experiences tailored and conversion-focused</p>
+                    <a href="#" class="link-custom">Read More</a>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service p-4 bg-base rounded-5 shadow-effect">
+                    <div class="iconbox rounded-5">
+                      <i class="las la-laptop-code"></i>
+                    </div>
+                    <h4 class="my-2">Web Design</h4>
+                    <p>I craft high-performing and delighful experiences tailored and conversion-focused</p>
+                    <a href="#" class="link-custom">Read More</a>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div class="row gy-4 mx-auto">
+          </div>
+        </section>
+        <!-- End of Service Section -->
+  
+        <!-- Start of Work Section -->
+         <section id="work" class="full-height px-lg-5 py-5">
+          <div class="container">
+            <div class="row pb-4">
+              <div class="col-lg-8">
+                <div class="text-brand">WORK</div>
+                <h1>My Recent Projects</h1>
+              </div>
+            </div>
+  
+            <div class="row gy-4 align-items-center">
+              <div class="col-md-6">
+                <div class="card-custom rounded-5 bg-base shadow-effect">
+                  <div class="card-custom-image rounded-5">
+                    <img src="assets/images/project-portfolio.png" alt="portfolio screenshot" class="rounded-5">
+                  </div>
+                  <div class="card-custom-content p-4">
+                    <h4>Portfolio</h4>
+                    <p>A comprehensive showcase of my projects and skills, demonstrating my capabilities in software development and web technologies.</p>
+                    <a href="https://asdtiwari.github.io" class="link-custom">Visit Now</a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-md-6">
+                <div class="card-custom rounded-5 bg-base shadow-effect">
+                  <div class="card-custom-image rounded-5">
+                    <img src="assets/images/project-angularCrudOperation.png" alt="portfolio screenshot" class="rounded-5">
+                  </div>
+                  <div class="card-custom-content p-4">
+                    <h4>Angular Crud App</h4>
+                    <p>Created a Single Page Application (SPA) to demonstrate efficient CRUD operations, hosted on GitHub Pages. The project highlights my skills in Angular development and frontend design.</p>
+                    <a href="https://asdtiwari.github.io/angularCrudOperation" class="link-custom">Visit Now</a>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+         </section>
+        <!-- End of Work Section -->
+  
+        <!-- Start of About Section -->
+        <section id="about" class="full-height px-lg-5 py-5">
+          <div class="container">
+  
+            <div class="row pb-4">
+              <div class="col-lg-8">
+                <div class="text-brand">ABOUT</div>
+                <h1>My Education &amp; Skills</h1>
+              </div>
+            </div>
+  
+            <div class="row gy-5">
+              <div class="col-lg-6">
+                <h3 class="mb-4">Education</h3>
+                <div class="row gy-4">
+                    <div class="col-12">
+                      <div class="bg-base p-4 rounded-5 shadow-effect">
+                        <h4>Bechelor of Technologies</h4>
+                        <p class="text-brand mb-2">Medi-Caps University &lpar;2022 - 2026&rpar;</p>
+                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa incidunt repellat enim necessitatibus voluptas tempora minus vitae suscipit tempore optio. Rerum, soluta similique quas magnam perspiciatis nulla dolore consequuntur at.</p>
+                      </div>
+                    </div>
+  
+                    <div class="col-12">
+                      <div class="bg-base p-4 rounded-5 shadow-effect">
+                        <h4>Bechelor of Technologies</h4>
+                        <p class="text-brand mb-2">Medi-Caps University &lpar;2022 - 2026&rpar;</p>
+                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa incidunt repellat enim necessitatibus voluptas tempora minus vitae suscipit tempore optio. Rerum, soluta similique quas magnam perspiciatis nulla dolore consequuntur at.</p>
+                      </div>
+                    </div>
+  
+                    <div class="col-12">
+                      <div class="bg-base p-4 rounded-5 shadow-effect">
+                        <h4>Bechelor of Technologies</h4>
+                        <p class="text-brand mb-2">Medi-Caps University &lpar;2022 - 2026&rpar;</p>
+                        <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa incidunt repellat enim necessitatibus voluptas tempora minus vitae suscipit tempore optio. Rerum, soluta similique quas magnam perspiciatis nulla dolore consequuntur at.</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+  
+              <div class="col-lg-6">
+                <h3 class="mb-4">Leadership</h3>
+                <div class="row gy-4">
+                    <div class="col-12">
+                      <div class="bg-base p-4 rounded-5 shadow-effect">
+                        <h4>Class Representative</h4>
+                        <p class="text-brand mb-2">Medi-Caps University &lpar;Since Aug 22, 2023&rpar;</p>
+                        <p class="mb-0">I have been serving as the Class Representative at Medi-Caps University. My responsibilities include reporting to the Year Incharge, Class Coordinator, and teachers, acting as a bridge between the class and the authorities.</p>
+                      </div>
+                    </div>
+  
+                    <div class="col-12">
+                      <div class="bg-base p-4 rounded-5 shadow-effect">
+                        <h4>Co-Founder</h4>
+                        <p class="text-brand mb-2">TIK2D &lpar;2022 - 2023&rpar;</p>
+                        <p class="mb-0">During my second semester, I was ambitious to achieve something, so I organized a team where we decided to learn, prepare, and develop a project. I was a co-founder of TIK2D, but due to circumstances beyond our control, TIK2D ultimately failed.</p>
+                      </div>
+                    </div>
+  
+                    <div class="col-12">
+                      <div class="bg-base p-4 rounded-5 shadow-effect">
+                        <h4>Head Boy</h4>
+                        <p class="text-brand mb-2">New Pithampur Public School &lpar;2021 - 2022&rpar;</p>
+                        <p class="mb-0">I served as the Head Boy at New Pithampur Public School, overseeing departments such as cultural, educational, and sports. Despite the challenges posed by COVID-19, we efficiently managed and delegated tasks, although we did not organize any major events. I am grateful for the support of my team members during that time.</p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </section>
+        <!-- End of About Section -->
+  
+        <!-- Start of Review Section -->
+         <section id="reviews" class="full-height px-lg-5 py-5">
+          <div class="container">
+            <div class="row pb-4">
+              <div class="col-lg-8">
+                <div class="text-brand">REVIEWS</div>
+                <h1>What our subscribers says</h1>
+              </div>
+            </div>
+  
+            <div class="row gy-4">
               <div class="col-md-4">
-                <div class="service p-4 bg-base rounded-5 shadow-effect">
-                  <div class="iconbox rounded-5">
-                    <i class="las la-feather"></i>
+                <div class="review bg-base p-4 rounded-5 shadow-effect">
+                  <div class="text-brand h5">
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
                   </div>
-                  <h4 class="my-2">UX Design</h4>
-                  <p>I craft high-performing and delighful experiences tailored and conversion-focused</p>
-                  <a href="#" class="link-custom">Read More</a>
+                  <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, error ducimus temporibus expedita eum perferendis culpa quibusdam atque adipisci nobis neque, eos assumenda aut quo illum explicabo eveniet quia officiis!</p>
+                  <div class="person">
+                    <h5 class="mb-0">Jon Doe</h5>
+                    <p class="mb-0">Twitter</p>
+                  </div>
                 </div>
               </div>
-
+  
               <div class="col-md-4">
-                <div class="service p-4 bg-base rounded-5 shadow-effect">
-                  <div class="iconbox rounded-5">
-                    <i class="las la-pencil-ruler"></i>
+                <div class="review bg-base p-4 rounded-5 shadow-effect">
+                  <div class="text-brand h5">
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
                   </div>
-                  <h4 class="my-2">Branding</h4>
-                  <p>I craft high-performing and delighful experiences tailored and conversion-focused</p>
-                  <a href="#" class="link-custom">Read More</a>
+                  <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, error ducimus temporibus expedita eum perferendis culpa quibusdam atque adipisci nobis neque, eos assumenda aut quo illum explicabo eveniet quia officiis!</p>
+                  <div class="person">
+                    <h5 class="mb-0">Jon Doe</h5>
+                    <p class="mb-0">Twitter</p>
+                  </div>
                 </div>
               </div>
-
+  
               <div class="col-md-4">
-                <div class="service p-4 bg-base rounded-5 shadow-effect">
-                  <div class="iconbox rounded-5">
-                    <i class="las la-laptop-code"></i>
+                <div class="review bg-base p-4 rounded-5 shadow-effect">
+                  <div class="text-brand h5">
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
+                    <i class="las la-star"></i>
                   </div>
-                  <h4 class="my-2">Web Design</h4>
-                  <p>I craft high-performing and delighful experiences tailored and conversion-focused</p>
-                  <a href="#" class="link-custom">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End of Service Section -->
-
-      <!-- Start of Work Section -->
-       <section id="work" class="full-height px-lg-5 py-5">
-        <div class="container">
-          <div class="row pb-4">
-            <div class="col-lg-8">
-              <div class="text-brand">WORK</div>
-              <h1>My Recent Projects</h1>
-            </div>
-          </div>
-
-          <div class="row gy-4 align-items-center">
-            <div class="col-md-6">
-              <div class="card-custom rounded-5 bg-base shadow-effect">
-                <div class="card-custom-image rounded-5">
-                  <img src="assets/images/project-portfolio.png" alt="portfolio screenshot" class="rounded-5">
-                </div>
-                <div class="card-custom-content p-4">
-                  <h4>Portfolio</h4>
-                  <p>A comprehensive showcase of my projects and skills, demonstrating my capabilities in software development and web technologies.</p>
-                  <a href="https://asdtiwari.github.io" class="link-custom">Visit Now</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="card-custom rounded-5 bg-base shadow-effect">
-                <div class="card-custom-image rounded-5">
-                  <img src="assets/images/project-angularCrudOperation.png" alt="portfolio screenshot" class="rounded-5">
-                </div>
-                <div class="card-custom-content p-4">
-                  <h4>Angular Crud App</h4>
-                  <p>Created a Single Page Application (SPA) to demonstrate efficient CRUD operations, hosted on GitHub Pages. The project highlights my skills in Angular development and frontend design.</p>
-                  <a href="https://asdtiwari.github.io/angularCrudOperation" class="link-custom">Visit Now</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-       </section>
-      <!-- End of Work Section -->
-
-      <!-- Start of About Section -->
-      <section id="about" class="full-height px-lg-5 py-5">
-        <div class="container">
-
-          <div class="row pb-4">
-            <div class="col-lg-8">
-              <div class="text-brand">ABOUT</div>
-              <h1>My Education &amp; Skills</h1>
-            </div>
-          </div>
-
-          <div class="row gy-5">
-            <div class="col-lg-6">
-              <h3 class="mb-4">Education</h3>
-              <div class="row gy-4">
-                  <div class="col-12">
-                    <div class="bg-base p-4 rounded-5 shadow-effect">
-                      <h4>Bechelor of Technologies</h4>
-                      <p class="text-brand mb-2">Medi-Caps University &lpar;2022 - 2026&rpar;</p>
-                      <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa incidunt repellat enim necessitatibus voluptas tempora minus vitae suscipit tempore optio. Rerum, soluta similique quas magnam perspiciatis nulla dolore consequuntur at.</p>
-                    </div>
+                  <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, error ducimus temporibus expedita eum perferendis culpa quibusdam atque adipisci nobis neque, eos assumenda aut quo illum explicabo eveniet quia officiis!</p>
+                  <div class="person">
+                    <h5 class="mb-0">Jon Doe</h5>
+                    <p class="mb-0">Twitter</p>
                   </div>
-
-                  <div class="col-12">
-                    <div class="bg-base p-4 rounded-5 shadow-effect">
-                      <h4>Bechelor of Technologies</h4>
-                      <p class="text-brand mb-2">Medi-Caps University &lpar;2022 - 2026&rpar;</p>
-                      <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa incidunt repellat enim necessitatibus voluptas tempora minus vitae suscipit tempore optio. Rerum, soluta similique quas magnam perspiciatis nulla dolore consequuntur at.</p>
-                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </section>
+        <!-- End of Review Section -->
+        
+        <!-- Start of Blog Section -->
+        <section id="blog" class="full-height px-lg-5 py-5">
+          <div class="container">
+            <div class="row pb-4">
+              <div class="col-lg-8">
+                <div class="text-brand">Blog</div>
+                <h1>My Recent Posts</h1>
+              </div>
+            </div>
+  
+            <div class="row gy-4">
+              <div class="col-md-4">
+                <div class="card-custom rounded-5 bg-base shadow-effect">
+                  <div class="card-custom-image rounded-5">
+                    <img src="assets/images/project-portfolio.png" alt="portfolio screenshot" class="rounded-5">
                   </div>
-
-                  <div class="col-12">
-                    <div class="bg-base p-4 rounded-5 shadow-effect">
-                      <h4>Bechelor of Technologies</h4>
-                      <p class="text-brand mb-2">Medi-Caps University &lpar;2022 - 2026&rpar;</p>
-                      <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa incidunt repellat enim necessitatibus voluptas tempora minus vitae suscipit tempore optio. Rerum, soluta similique quas magnam perspiciatis nulla dolore consequuntur at.</p>
-                    </div>
+                  <div class="card-custom-content p-4">
+                    <p class="text-brand mb-2">Date</p>
+                    <h4>Portfolio</h4>
+                    <a href="https://asdtiwari.github.io" class="link-custom">Read More</a>
                   </div>
+                </div>
               </div>
-            </div>
-
-            <div class="col-lg-6">
-              <h3 class="mb-4">Leadership</h3>
-              <div class="row gy-4">
-                  <div class="col-12">
-                    <div class="bg-base p-4 rounded-5 shadow-effect">
-                      <h4>Class Representative</h4>
-                      <p class="text-brand mb-2">Medi-Caps University &lpar;Since Aug 22, 2023&rpar;</p>
-                      <p class="mb-0">I have been serving as the Class Representative at Medi-Caps University. My responsibilities include reporting to the Year Incharge, Class Coordinator, and teachers, acting as a bridge between the class and the authorities.</p>
-                    </div>
+  
+              <div class="col-md-4">
+                <div class="card-custom rounded-5 bg-base shadow-effect">
+                  <div class="card-custom-image rounded-5">
+                    <img src="assets/images/project-portfolio.png" alt="portfolio screenshot" class="rounded-5">
                   </div>
-
-                  <div class="col-12">
-                    <div class="bg-base p-4 rounded-5 shadow-effect">
-                      <h4>Co-Founder</h4>
-                      <p class="text-brand mb-2">TIK2D &lpar;2022 - 2023&rpar;</p>
-                      <p class="mb-0">During my second semester, I was ambitious to achieve something, so I organized a team where we decided to learn, prepare, and develop a project. I was a co-founder of TIK2D, but due to circumstances beyond our control, TIK2D ultimately failed.</p>
-                    </div>
+                  <div class="card-custom-content p-4">
+                    <p class="text-brand mb-2">Date</p>
+                    <h4>Portfolio</h4>
+                    <a href="https://asdtiwari.github.io" class="link-custom">Read More</a>
                   </div>
-
-                  <div class="col-12">
-                    <div class="bg-base p-4 rounded-5 shadow-effect">
-                      <h4>Head Boy</h4>
-                      <p class="text-brand mb-2">New Pithampur Public School &lpar;2021 - 2022&rpar;</p>
-                      <p class="mb-0">I served as the Head Boy at New Pithampur Public School, overseeing departments such as cultural, educational, and sports. Despite the challenges posed by COVID-19, we efficiently managed and delegated tasks, although we did not organize any major events. I am grateful for the support of my team members during that time.</p>
-                    </div>
+                </div>
+              </div>
+  
+              <div class="col-md-4">
+                <div class="card-custom rounded-5 bg-base shadow-effect">
+                  <div class="card-custom-image rounded-5">
+                    <img src="assets/images/project-portfolio.png" alt="portfolio screenshot" class="rounded-5">
                   </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <!-- End of About Section -->
-
-      <!-- Start of Review Section -->
-       <section id="reviews" class="full-height px-lg-5 py-5">
-        <div class="container">
-          <div class="row pb-4">
-            <div class="col-lg-8">
-              <div class="text-brand">REVIEWS</div>
-              <h1>What our subscribers says</h1>
-            </div>
-          </div>
-
-          <div class="row gy-4">
-            <div class="col-md-4">
-              <div class="review bg-base p-4 rounded-5 shadow-effect">
-                <div class="text-brand h5">
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                </div>
-                <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, error ducimus temporibus expedita eum perferendis culpa quibusdam atque adipisci nobis neque, eos assumenda aut quo illum explicabo eveniet quia officiis!</p>
-                <div class="person">
-                  <h5 class="mb-0">Jon Doe</h5>
-                  <p class="mb-0">Twitter</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="review bg-base p-4 rounded-5 shadow-effect">
-                <div class="text-brand h5">
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                </div>
-                <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, error ducimus temporibus expedita eum perferendis culpa quibusdam atque adipisci nobis neque, eos assumenda aut quo illum explicabo eveniet quia officiis!</p>
-                <div class="person">
-                  <h5 class="mb-0">Jon Doe</h5>
-                  <p class="mb-0">Twitter</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="review bg-base p-4 rounded-5 shadow-effect">
-                <div class="text-brand h5">
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                  <i class="las la-star"></i>
-                </div>
-                <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, error ducimus temporibus expedita eum perferendis culpa quibusdam atque adipisci nobis neque, eos assumenda aut quo illum explicabo eveniet quia officiis!</p>
-                <div class="person">
-                  <h5 class="mb-0">Jon Doe</h5>
-                  <p class="mb-0">Twitter</p>
+                  <div class="card-custom-content p-4">
+                    <p class="text-brand mb-2">Date</p>
+                    <h4>Portfolio</h4>
+                    <a href="https://asdtiwari.github.io" class="link-custom">Read More</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-       </section>
-      <!-- End of Review Section -->
-      
-      <!-- Start of Blog Section -->
-      <section id="blog" class="full-height px-lg-5 py-5">
-        <div class="container">
-          <div class="row pb-4">
-            <div class="col-lg-8">
-              <div class="text-brand">Blog</div>
-              <h1>My Blog Posts</h1>
+         </section>
+        <!-- End of Blog Section -->
+  
+        <!-- Start of Contact Section -->
+        <section id="contact" class="full-height px-lg-5 py-5">
+          <div class="container">
+            <div class="row pb-4 justify-content-center text-center">
+              <div class="col-lg-8">
+                <div class="text-brand">CONTACT</div>
+                <h1>Interested in working together? Let's talk</h1>
+              </div>
+  
+              <div class="col-lg-8">
+                <form action="" class="row g-lg-3 gy-3">
+                  <div class="form-group col-md-6">
+                    <input type="text" class="form-control" placeholder="Enter Your Name" name="name">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <input type="email" class="form-control" placeholder="Enter Your Email" name="email">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <input type="text" class="form-control" placeholder="Enter Subject" name="subject">
+                  </div>
+                  <div class="form-group col-md-12">
+                    <textarea name="message" id="message" placeholder="Enter Your Message" rows="5" class="form-control"></textarea>
+                  </div>
+                  <div class="form-group col-12 d-grid">
+                    <button class="btn btn-brand">Send</button>
+                  </div>
+                </form>
+              </div>
             </div>
+  
           </div>
-
-          <div class="row gy-4">
-            <div class="col-md-4">
-              <div class="card-custom rounded-5 bg-base shadow-effect">
-                <div class="card-custom-image rounded-5">
-                  <img src="assets/images/project-portfolio.png" alt="portfolio screenshot" class="rounded-5">
-                </div>
-                <div class="card-custom-content p-4">
-                  <p class="text-brand mb-2">Date</p>
-                  <h4>Portfolio</h4>
-                  <a href="https://asdtiwari.github.io" class="link-custom">Read More</a>
-                </div>
+         </section>
+        <!-- End of Contact Section -->
+  
+        <!-- Start of Footer Section -->
+         <footer class="py-2 px-lg-5">
+          <div class="container">
+            <div class="row gy-4 justify-content-between">
+              <div class="col-auto">
+                <p class="mb-0">Copyright text goes here</p>
               </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card-custom rounded-5 bg-base shadow-effect">
-                <div class="card-custom-image rounded-5">
-                  <img src="assets/images/project-portfolio.png" alt="portfolio screenshot" class="rounded-5">
-                </div>
-                <div class="card-custom-content p-4">
-                  <p class="text-brand mb-2">Date</p>
-                  <h4>Portfolio</h4>
-                  <a href="https://asdtiwari.github.io" class="link-custom">Read More</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card-custom rounded-5 bg-base shadow-effect">
-                <div class="card-custom-image rounded-5">
-                  <img src="assets/images/project-portfolio.png" alt="portfolio screenshot" class="rounded-5">
-                </div>
-                <div class="card-custom-content p-4">
-                  <p class="text-brand mb-2">Date</p>
-                  <h4>Portfolio</h4>
-                  <a href="https://asdtiwari.github.io" class="link-custom">Read More</a>
+              <div class="col-auto">
+                <div class="social-links">
+                  <a href="https://www.github.com/asdtiwari"><i class="lab la-github"></i></a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-       </section>
-      <!-- End of Blog Section -->
+         </footer>
+        <!-- End of Footer Section -->
+      </div>
 
-      <!-- Start of Contact Section -->
-      <section id="contact" class="full-height px-lg-5 py-5">
-        <div class="container">
-          <div class="row pb-4 justify-content-center text-center">
-            <div class="col-lg-8">
-              <div class="text-brand">CONTACT</div>
-              <h1>Interested in working together? Let's talk</h1>
-            </div>
-
-            <div class="col-lg-8">
-              <form action="" class="row g-lg-3 gy-3">
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" placeholder="Enter Your Name" name="name">
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="email" class="form-control" placeholder="Enter Your Email" name="email">
-                </div>
-                <div class="form-group col-md-12">
-                  <input type="text" class="form-control" placeholder="Enter Subject" name="subject">
-                </div>
-                <div class="form-group col-md-12">
-                  <textarea name="message" id="message" placeholder="Enter Your Message" rows="5" class="form-control"></textarea>
-                </div>
-                <div class="form-group col-12 d-grid">
-                  <button class="btn btn-brand">Send</button>
-                </div>
-              </form>
-            </div>
-          </div>
-
-        </div>
-       </section>
-      <!-- End of Contact Section -->
-
-      <!-- Start of Footer Section -->
-       <footer class="py-2 px-lg-5">
-        <div class="container">
-          <div class="row gy-4 justify-content-between">
-            <div class="col-auto">
-              <p class="mb-0">Copyright text goes here</p>
-            </div>
-            <div class="col-auto">
-              <div class="social-links">
-                <a href="https://www.github.com/asdtiwari"><i class="lab la-github"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-       </footer>
-      <!-- End of Footer Section -->
-    </div>
     <!-- End of content wrapper -->    
-
-    <!-- Script Files -->
+     
+    <!-- Start of Script Files Inclusion-->
     <script src="./assets/js/bootstrap.bundle.min.js" async defer></script>
+    
     <script src="./assets/js/aos.js" async defer></script>
+    
     <script src="./assets/js/main.js" async defer></script>
+    <!-- End of Script Files Inclusion -->
 
     <!-- End of Body Section-->
   </body>
+
 </html>
