@@ -14,12 +14,7 @@
 }
 
 /* To Reset default behaviour */
-body {
-    background-color: var(--color-base2);
-    background-image: var(--bs-gradient) !important;
-    color: var(--color-body);
-    font-family: var(--font-base), sans-serif;
-
+* {
     &::-webkit-scrollbar {
         width: 3px;
         height: 3px;
@@ -33,6 +28,14 @@ body {
         background-color: white;
         border-radius: 20px;
     }
+}
+
+body {
+    background-color: var(--color-base2);
+    background-image: var(--bs-gradient) !important;
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,7 +61,7 @@ img {
 /* Navbar */
 .offcanvas, .navbar {
     background-color: var(--color-base) !important;
-    height: fit-content;
+    height: fit-content !important;
     .nav-link {
         font-weight: 700;
         text-transform: uppercase;
@@ -92,6 +95,10 @@ section .container {
     padding-top: 10px;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 .home {
     padding-top: 60px;
 }
@@ -117,6 +124,10 @@ section .container {
     border-radius: .5rem !important;
 }
 
+.text-brand {
+    color: var(--color-brand2);
+}
+
 .iconbox {
     color: var(--color-base2);
     width: 60px;
@@ -139,7 +150,7 @@ section .container {
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.text-brand {
+.text-brand2 {
     color: var(--color-brand2);
 }
 
@@ -152,11 +163,11 @@ section .container {
 .btn-brand {
     background-color: var(--color-brand);
     border-color: var(--color-brand);
+    color: var(--color-base2) !important;
     transition: all 0.5s ease;
 
     &:hover, &:focus {
         background-color: var(--color-brand2);
-        color: #000;
         border-color: var(--color-brand2);
     }
 }
@@ -218,6 +229,19 @@ section .container {
 
     input.form-control {
         height: 45px;
+    }
+
+    .container {
+
+        i {
+            color: white !important;
+            transition: all 0.5s ease;
+
+            &:hover {
+                color: var(--color-brand2) !important;
+                transform: translateY(5px) !important;
+            }
+        }
     }
 
 }
