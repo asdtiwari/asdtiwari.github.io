@@ -1,17 +1,28 @@
+AOS.init ({
+
+    // Settings that can be overridden on per-element basis, by 'data-aos-*' attributes:
+    offset: 120, // offset (in pex) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 900,  // default easing for AOS animations
+    easing: 'ease', // default easing for AOS animations
+    once: false,    // whether animation should happen only once - while scrolling down
+    mirror: false,  // whether elements should animate out while scrolling past them
+    //anchorPlacement: 'top-bottom'   // defines which position of the element regading to the window screen
+
+});
+
+ 
 $(document).ready(function() {
 
-    AOS.init ({    
-        // Settings that can be overridden on per-element basis, by 'data-aos-*' attributes:
-        offset: 120, // offset (in pex) from the original trigger point
-        delay: 0, // values from 0 to 3000, with step 50ms
-        duration: 900,  // default easing for AOS animations
-        easing: 'ease', // default easing for AOS animations
-        once: false,    // whether animation should happen only once - while scrolling down
-        mirror: false,  // whether elements should animate out while scrolling past them
-        anchorPlacement: 'top-bottom'   // defines which position of the element regading to the window screen
-    });
-
     AOS.init();
+
+    // Attach a click event listener to each nav-link inside the offcanvas to hide the offcanvas as click on any link
+    $('.offcanvas-body .nav-link, .offcanvas-header .navbar-brand').on('click', function() {
+        // Close the offcanvas
+        var offcanvasElement = $('#offcanvasNavbar');
+        var bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement[0]); // Get the instance of the offcanvas
+        bsOffcanvas.hide(); // Hide the offcanvas
+    });
     
     // Start of  JQuery Code to Submit the form to Google Sheet
 
