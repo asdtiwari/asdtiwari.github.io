@@ -108,6 +108,18 @@ section .container {
     background-image: var(--bs-gradient) !important;
 }
 
+.bg-base-hover {
+    transition: all 0.5s ease;
+    &:hover {
+        background-color: var(--color-base2) !important;
+        background-image: var(--bs-gradient) !important;
+    }
+    &:active {
+        border: none;
+        box-shadow: none;
+    }
+}
+
 .my-quote {
     color: var(--color-brand2);
 }
@@ -246,18 +258,6 @@ section .container {
 
 }
 
-/* footer */
-
-.social-icons a {
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--color-base);
-    border-radius: 100px;
-    font-size: 24px;
-}
 
 /* media query */
 @media (min-width: 992px) {
