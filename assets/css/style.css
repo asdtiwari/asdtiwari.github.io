@@ -15,6 +15,8 @@
 
 /* To Reset default behaviour */
 * {
+    scroll-behavior: smooth;
+    
     &::-webkit-scrollbar {
         width: 3px;
         height: 3px;
