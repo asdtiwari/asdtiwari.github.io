@@ -1,22 +1,6 @@
-AOS.init ({
-
-    // Settings that can be overridden on per-element basis, by 'data-aos-*' attributes:
-    offset: 120, // offset (in pex) from the original trigger point
-    delay: 0, // values from 0 to 3000, with step 50ms
-    duration: 900,  // default easing for AOS animations
-    easing: 'ease', // default easing for AOS animations
-    once: false,    // whether animation should happen only once - while scrolling down
-    mirror: false,  // whether elements should animate out while scrolling past them
-    //anchorPlacement: 'top-bottom'   // defines which position of the element regading to the window screen
-
-});
-
- 
 $(document).ready(function() {
-
-    AOS.init();
-
-    // Attach a click event listener to each nav-link inside the offcanvas to hide the offcanvas as click on any link
+    
+    // Attach a click event listener to each nav-link inside the offcanvas to hide the offcanvas
     $('.offcanvas-body .nav-link, .offcanvas-header .navbar-brand').on('click', function() {
         // Close the offcanvas
         var offcanvasElement = $('#offcanvasNavbar');
@@ -24,8 +8,8 @@ $(document).ready(function() {
         bsOffcanvas.hide(); // Hide the offcanvas
     });
     
-    // Start of  JQuery Code to Submit the form to Google Sheet
 
+    // Start of  JQuery Code to Submit the form to Google Sheet
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzr-OahPtmr9u6C87rg01T-CvHKGVTit1LWnu0KqBOIJTWU41Oxw4Vx6kkdnEukuP6jbg/exec';
     const form = $('[name="submit-to-google-sheet"]');
     var allowSubmit = true;
@@ -74,7 +58,30 @@ $(document).ready(function() {
         disableForUser();
         sendTheQuery(e);
     });
-
     // End of  JQuery Code to Submit the form to Google Sheet
+
+
+    /* Start of animate on scroll script code */
+    function animateOnScroll() {
+        $('.aos-fade-in, .aos-fade-up').each(function () {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+
+            // Check if the element is in the viewport
+            if (elementBottom > viewportTop && elementTop < viewportBottom) {
+                $(this).addClass('aos-animate-in');
+            } else {
+                $(this).removeClass('aos-animate-in');
+            }
+        });
+    }
+
+    // Initial check and setup event listener for scrolling
+    $(window).on('scroll', animateOnScroll);
+    $(window).on('resize', animateOnScroll);
+    animateOnScroll();
+    /* End of animate on scroll script code */
 
 });
