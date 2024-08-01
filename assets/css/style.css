@@ -105,6 +105,10 @@ section .container {
     padding-top: 60px;
 }
 
+.text-color-body {
+    color: var(--color-body);
+}
+
 .bg-base {
     background-color: var(--color-base);
     background-image: var(--bs-gradient) !important;
@@ -169,18 +173,23 @@ section .container {
 }
 
 /* button */
+.circular-btn {
+    height: 150px;
+    width: 150px;
+}
+
 .btn {
     padding: 12px 28px;
     font-weight: 700;
 }
 
-.btn-brand {
+.circular-btn, .btn-brand {
     background-color: var(--color-brand);
     border-color: var(--color-brand);
     color: var(--color-base2) !important;
     transition: all 0.5s ease;
 
-    &:hover, &:focus {
+    &:hover {
         background-color: var(--color-brand2);
         border-color: var(--color-brand2);
     }
