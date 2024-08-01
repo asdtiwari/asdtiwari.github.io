@@ -303,3 +303,27 @@ section .container {
         }
     }
 }
+
+/* start of animate on scroll css code */
+/* Fade-In Animation */
+.aos-fade-in {
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.aos-fade-in.aos-animate-in {
+    opacity: 1;
+}
+
+/* Fade-Up Animation */
+.aos-fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.9s ease;
+}
+
+.aos-fade-up.aos-animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* end of animate on scroll css code */
