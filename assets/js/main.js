@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    'use strict';
     
     // Attach a click event listener to each nav-link inside the offcanvas to hide the offcanvas
     $('.offcanvas-body .nav-link, .offcanvas-header .navbar-brand').on('click', function() {
@@ -53,10 +54,26 @@ $(document).ready(function() {
     }
 
     // Event Handling
-    form.on('submit', function(e) {
-        msg.text("Message is being sent...");
-        disableForUser();
-        sendTheQuery(e);
+    form.on('submit', function(event) {
+        // Add the was-validated class to the form
+        $(this).addClass('was-validated');
+
+        // Check if the form is valid
+        if (this.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        } else {
+    
+          msg.text("Message is being sent...");
+          disableForUser(); // Disable submit button until one message is sent
+          sendTheQuery(event); // Send the query to Google Sheets
+        }
+
+        // After sending the query, reset the form and remove validation classes
+        $(this).on('reset', function() {
+            $(this).removeClass('was-validated');
+            $(this).find('.form-control').removeClass('is-valid is-invalid');
+        });
     });
     // End of  JQuery Code to Submit the form to Google Sheet
 
