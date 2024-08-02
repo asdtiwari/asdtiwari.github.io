@@ -138,6 +138,10 @@ section .container {
     }
 }
 
+.width-fit-content {
+    width: fit-content !important;
+}
+
 .rounded-5 {
     border-radius: .5rem !important;
 }
@@ -269,6 +273,13 @@ section .container {
 
 }
 
+#submit-query:disabled {
+    background-color: var(--color-brand2);
+    border-color: var(--color-brand2);
+    color: var(--color-base2) !important;
+    opacity: 25%;
+}
+
 
 /* media query */
 @media (min-width: 992px) {
@@ -312,6 +323,12 @@ section .container {
                 margin: 0;
             }
         }
+    }
+}
+
+@media (max-width: 250px) {
+    .col-xxs-12 {
+        width: 100%;
     }
 }
 
