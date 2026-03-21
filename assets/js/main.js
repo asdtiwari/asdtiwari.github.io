@@ -26,17 +26,37 @@ function initTheme() {
 function renderNavbar() {
   const isDark = document.documentElement.classList.contains("dark");
 
-  // SVG Icons for the theme toggle button
+  // SVG Icons
   const moonIcon = `<svg class="w-5 h-5 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>`;
   const sunIcon = `<svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>`;
+  const menuIcon = `<svg class="w-6 h-6 text-slate-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>`;
+
+  // Helper scripts for the slide-down animation
+  const toggleMenuScript = `
+    document.getElementById('mobile-menu').classList.toggle('max-h-0');
+    document.getElementById('mobile-menu').classList.toggle('opacity-0');
+    document.getElementById('mobile-menu').classList.toggle('max-h-[500px]');
+    document.getElementById('mobile-menu').classList.toggle('opacity-100');
+    document.getElementById('mobile-backdrop').classList.toggle('opacity-0');
+    document.getElementById('mobile-backdrop').classList.toggle('pointer-events-none');
+  `.replace(/\s+/g, ' ').trim();
+
+  const closeMenuScript = `
+    document.getElementById('mobile-menu').classList.add('max-h-0', 'opacity-0');
+    document.getElementById('mobile-menu').classList.remove('max-h-[500px]', 'opacity-100');
+    document.getElementById('mobile-backdrop').classList.add('opacity-0', 'pointer-events-none');
+  `.replace(/\s+/g, ' ').trim();
 
   return `
+        <div id="mobile-backdrop" onclick="${closeMenuScript}" class="fixed inset-0 z-40 bg-slate-900/20 dark:bg-slate-900/50 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none md:hidden"></div>
+
         <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-white/70 dark:bg-ide-bg/90 border-b border-slate-200 dark:border-ide-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-20">
                     <a href="#" class="flex-shrink-0 font-bold text-2xl tracking-tighter text-slate-900 dark:text-white hover:opacity-80 transition-opacity" aria-label="Back to top">
                         ASDT<span class="text-brand">.</span>
                     </a>
+                    
                     <div class="hidden md:flex space-x-6 items-center font-medium text-sm">
                         <a href="#experience" class="text-slate-600 dark:text-slate-400 hover:text-brand dark:hover:text-brand transition-colors">Experience</a>
                         <a href="#projects" class="text-slate-600 dark:text-slate-400 hover:text-brand dark:hover:text-brand transition-colors">Architecture</a>
@@ -44,10 +64,30 @@ function renderNavbar() {
                         <a href="#dashboard" class="text-slate-600 dark:text-slate-400 hover:text-brand dark:hover:text-brand transition-colors">Proof of Work</a>
                         <a href="#resources" class="text-slate-600 dark:text-slate-400 hover:text-brand dark:hover:text-brand transition-colors">Resources</a>
                         <a href="#contact" class="text-slate-600 dark:text-slate-400 hover:text-brand dark:hover:text-brand transition-colors">Contact</a>
-                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-200 dark:hover:ide-surface transition-colors" aria-label="Toggle Theme">
+                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle Theme">
                             ${isDark ? sunIcon : moonIcon}
                         </button>
                     </div>
+
+                    <div class="flex items-center space-x-2 md:hidden">
+                        <button onclick="toggleTheme()" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle Theme">
+                            ${isDark ? sunIcon : moonIcon}
+                        </button>
+                        <button onclick="${toggleMenuScript}" class="p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" aria-label="Open Menu">
+                            ${menuIcon}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="absolute top-20 left-0 w-full overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 md:hidden">
+                <div class="bg-white/95 dark:bg-ide-bg/95 border-b border-slate-200 dark:border-ide-border backdrop-blur-md px-4 pt-2 pb-6 space-y-2 flex flex-col items-center font-medium text-sm shadow-xl">
+                    <a href="#experience" onclick="${closeMenuScript}" class="block w-full py-3 text-center text-slate-600 dark:text-slate-400 hover:text-brand dark:hover:text-brand transition-colors">Experience</a>
+                    <a href="#projects" onclick="${closeMenuScript}" class="block w-full py-3 text-center text-slate-600 dark:text-slate-400 hover:text-brand dark:hover:text-brand transition-colors">Architecture</a>
+                    <a href="#skills" onclick="${closeMenuScript}" class="block w-full py-3 text-center text-slate-600 dark:text-slate-400 hover:text-brand dark:hover:text-brand transition-colors">Skills</a>
+                    <a href="#dashboard" onclick="${closeMenuScript}" class="block w-full py-3 text-center text-slate-600 dark:text-slate-400 hover:text-brand dark:hover:text-brand transition-colors">Proof of Work</a>
+                    <a href="#resources" onclick="${closeMenuScript}" class="block w-full py-3 text-center text-slate-600 dark:text-slate-400 hover:text-brand dark:hover:text-brand transition-colors">Resources</a>
+                    <a href="#contact" onclick="${closeMenuScript}" class="block w-full py-3 text-center text-slate-600 dark:text-slate-400 hover:text-brand dark:hover:text-brand transition-colors">Contact</a>
                 </div>
             </div>
         </nav>
