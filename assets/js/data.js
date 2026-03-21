@@ -59,6 +59,39 @@ const portfolioData = {
         }
     ],
 
+    achievements: [
+        {
+            title: "TCS Digital Offer",
+            description: "Received a 'Digital Role' offer (High-differential package) through the TCS National Qualifier Test.",
+            icon: "🏆"
+        },
+        {
+            title: "HashedIn by Deloitte",
+            description: "Secured an Internship + FTE offer for a Software Engineering role through competitive selection.",
+            icon: "💼"
+        },
+        {
+            title: "School Head Boy (2021-22)",
+            description: "Exhibited leadership and accountability, managing student affairs and school events.",
+            icon: "🎓"
+        }
+    ],
+
+    certifications: [
+        {
+            name: "Programming in Java (NPTEL)",
+            provider: "IIT Kharagpur",
+            ranking: "Top 1% Elite + Gold",
+            link: "#" 
+        },
+        {
+            name: "Spring Boot Architecture",
+            provider: "Self-Paced / Guided",
+            ranking: "Core Backend Mastery",
+            link: "#"
+        }
+    ],
+
     resources: [
         {
             title: "Java Quick Revision",

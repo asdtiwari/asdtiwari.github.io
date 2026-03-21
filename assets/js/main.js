@@ -226,45 +226,36 @@ function renderSkills() {
     `;
 }
 
-function renderResources() {
-  const resourcesHTML = portfolioData.resources
-    .map(
-      (res) => `
-        <a href="${res.link}" target="_blank" class="block p-6 bg-slate-50 dark:bg-ide-surface border border-slate-200 dark:border-ide-border rounded-xl hover:bg-slate-100 dark:hover:bg-ide-border transition-all group">
-            <div class="flex justify-between items-start mb-4">
-                <div class="p-2 bg-brand/10 dark:bg-brand/20 rounded-lg text-brand">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                </div>
-                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 group-hover:text-brand transition-colors">${res.type}</span>
-            </div>
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">${res.title}</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">${res.description}</p>
-        </a>
-    `,
-    )
-    .join("");
-
-  return `
-        <section id="resources" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-slate-900 dark:text-white flex items-center">
-                    <span class="text-brand mr-3">04.</span> Open Source & Resources
-                </h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl">
-                    I believe in giving back to the community. Here you can find my structured notes, technical guides, and future referral opportunities.
-                </p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                ${resourcesHTML}
-            </div>
-        </section>
-    `;
-}
-
 function renderDashboard() {
   const dash = portfolioData.dashboard;
 
-  // GitHub Live API Cards (using a transparent theme to blend with your Dark/Light mode)
+  // 1. Map Certifications
+  const certificationsHTML = portfolioData.certifications.map(cert => `
+    <div class="flex justify-between items-center p-3 border-b border-slate-100 dark:border-ide-border/30 last:border-0">
+        <div>
+            <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">${cert.name}</h4>
+            <p class="text-[10px] text-brand uppercase font-semibold">${cert.provider}</p>
+        </div>
+        <span class="text-[10px] px-2 py-1 bg-brand/10 text-brand rounded-md font-bold">${cert.ranking}</span>
+    </div>
+  `).join("");
+
+  // 2. Map Achievements
+  const achievementsHTML = portfolioData.achievements.map(ach => `
+    <div class="p-4 rounded-lg bg-slate-50 dark:bg-ide-bg border border-slate-200 dark:border-ide-border/50 hover:border-brand transition-colors">
+        <div class="flex items-center gap-3">
+            <span class="text-2xl">${ach.icon}</span>
+            <div>
+                <h4 class="text-sm font-bold text-slate-800 dark:text-slate-200">${ach.title}</h4>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">${ach.description}</p>
+            </div>
+        </div>
+    </div>
+  `).join("");
+
+
+
+  // 3. GitHub Live API Cards (using a transparent theme to blend with your Dark/Light mode)
   const githubStreak = `https://github-readme-streak-stats.herokuapp.com/?user=${dash.github}&theme=transparent&hide_border=true&title_color=0ea5e9&text_color=64748b&icon_color=0ea5e9&sideNums=64748b&sideLabels=64748b&ring=0ea5e9&fire=0ea5e9`;
   const githubLangs = `https://github-readme-stats.vercel.app/api/top-langs/?username=${dash.github}&layout=compact&theme=transparent&hide_border=true&title_color=0ea5e9&text_color=64748b`;
 
@@ -284,6 +275,22 @@ function renderDashboard() {
             <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center">
                 <span class="text-brand mr-3">04.</span> Proof of Work
             </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                <div class="bg-white dark:bg-ide-surface border border-slate-200 dark:border-ide-border rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                         <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-2.06 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946 2.06 3.42 3.42 0 012.35 2.35 3.42 3.42 0 002.06 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-2.06 1.946 3.42 3.42 0 01-2.35 2.35 3.42 3.42 0 00-1.946 2.06 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-2.06 3.42 3.42 0 01-2.35-2.35 3.42 3.42 0 00-2.06-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 002.06-1.946 3.42 3.42 0 012.35-2.35z"></path></svg>
+                         Certifications
+                    </h3>
+                    <div class="space-y-1">${certificationsHTML}</div>
+                </div>
+                <div class="lg:col-span-2 bg-white dark:bg-ide-surface border border-slate-200 dark:border-ide-border rounded-xl p-6">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Major Achievements</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        ${achievementsHTML}
+                    </div>
+                </div>
+            </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div class="lg:col-span-2 space-y-6">
@@ -360,13 +367,49 @@ function renderDashboard() {
     `;
 }
 
+function renderResources() {
+  const resourcesHTML = portfolioData.resources
+    .map(
+      (res) => `
+        <a href="${res.link}" target="_blank" class="block p-6 bg-slate-50 dark:bg-ide-surface border border-slate-200 dark:border-ide-border rounded-xl hover:bg-slate-100 dark:hover:bg-ide-border transition-all group">
+            <div class="flex justify-between items-start mb-4">
+                <div class="p-2 bg-brand/10 dark:bg-brand/20 rounded-lg text-brand">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 group-hover:text-brand transition-colors">${res.type}</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">${res.title}</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">${res.description}</p>
+        </a>
+    `,
+    )
+    .join("");
+
+  return `
+        <section id="resources" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white flex items-center">
+                    <span class="text-brand mr-3">05.</span> Open Source & Resources
+                </h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl">
+                    I believe in giving back to the community. Here you can find my structured notes, technical guides, and future referral opportunities.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                ${resourcesHTML}
+            </div>
+        </section>
+    `;
+}
+
+
 function renderContact() {
   const contact = portfolioData.contact;
 
   return `
         <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-200 dark:border-ide-border mt-10">
             <div class="text-center max-w-2xl mx-auto mb-12">
-                <p class="text-brand font-semibold tracking-wide uppercase mb-3">05. What's Next?</p>
+                <p class="text-brand font-semibold tracking-wide uppercase mb-3">06. What's Next?</p>
                 <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-6">Get In Touch</h2>
                 <p class="text-slate-600 dark:text-slate-400 text-lg">
                     Whether you have a question, a system architecture problem to solve, or are looking to hire a dedicated backend engineer, my inbox is always open.
