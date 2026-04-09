@@ -257,7 +257,7 @@ function renderDashboard() {
 
   // 3. GitHub Live API Cards (using a transparent theme to blend with your Dark/Light mode)
   const githubStreak = `https://github-readme-streak-stats.herokuapp.com/?user=${dash.github}&theme=transparent&hide_border=true&title_color=0ea5e9&text_color=64748b&icon_color=0ea5e9&sideNums=64748b&sideLabels=64748b&ring=0ea5e9&fire=0ea5e9`;
-  const githubLangs = `https://github-readme-stats.vercel.app/api/top-langs/?username=${dash.github}&layout=compact&theme=transparent&hide_border=true&title_color=0ea5e9&text_color=64748b`;
+  const githubLangs = `https://github-readme-stats-fast.vercel.app/api/top-langs/?username=${dash.github}&layout=compact&theme=transparent&hide_border=true&title_color=0ea5e9&text_color=64748b`;
 
   const linkedinHTML = dash.linkedinPosts
     .map(
