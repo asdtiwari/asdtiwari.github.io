@@ -150,7 +150,7 @@ const portfolioData = {
     },
     
     contact: {
-        phone: "+91 7000454120",
+        phone: "",
         email: "asdtiwari76@gmail.com",
         linkedin: "https://linkedin.com/in/asdtiwari",
         github: "https://github.com/asdtiwari"
